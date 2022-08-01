@@ -1,0 +1,37 @@
+<html>
+<head>
+<title> Student </title>
+<script>
+let data = [{name:"tv",price:3000,dis:10},{name:"phone",price:1000,dis:5},{name:"AC",price:4000,dis:20}]
+function fun()
+{
+ var n,p,d,q,b,k,g;
+n=document.getElementById("t1").value;
+q=document.getElementById("t2").value;
+k=data.findIndex(x=>x.name==n);
+p=data[k].price*q;
+document.getElementById("t3").value=p;
+g=data[k].dis;
+d=(g/100)*p;
+document.getElementById("t4").value=d;
+b=p-d;
+document.getElementById("t5").value=b;
+
+}
+</script>
+</head>
+<body>
+<p>Name</p>
+<p><input type ="text" id="t1"></p>
+<p>Quantity</p>
+<p><input type ="number" id ="t2"></p>
+<p>Price</p>
+<p><input type ="text" id ="t3"></p>
+<p>Discount</p>
+<p><input type ="text" id = "t4"></p>
+<p>Bill</p>
+<p><input type ="text" id="t5"></p>
+<button onclick=fun()> Cal </button>
+</body>
+</html>
+
